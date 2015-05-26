@@ -18,11 +18,13 @@ namespace HeapSort
             var resultArray = heap.Sort();
 
             Console.WriteLine("Output sorted array:");
-            PrettyPrint(resultArray);
-
-            
+            PrettyPrint(resultArray);  
         }
 
+        /// <summary>
+        /// Print array to console in a convinient form.
+        /// </summary>
+        /// <param name="array">An array for output.</param>
         static void PrettyPrint(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
