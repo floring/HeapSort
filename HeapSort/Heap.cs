@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace HeapSort
 {
@@ -58,7 +55,7 @@ namespace HeapSort
                 MaxHeapify(length, largest);
             }
         }
-        
+
         /// <summary>
         /// Exchange two variables in the array. 
         /// </summary>
@@ -105,5 +102,20 @@ namespace HeapSort
             }
             return _array;
         }
+
+        /// <summary>
+        /// Convert the array to its string implementation so that it is suitable for display. 
+        /// </summary>
+        /// <returns>A string that represents the current array</returns>
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            for (var i = 0; i < _array.Length; i++)
+            {
+                sb.AppendFormat(String.Format("{0} ", _array[i]));
+            }
+            return sb.ToString();
+        }
+
     }
 }
